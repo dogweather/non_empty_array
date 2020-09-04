@@ -1,6 +1,6 @@
 # NonEmptyArray
 
-An enumerable which is guaranteed to not be empty.
+An [enumerable](All methods from [Enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html)) which is guaranteed to not be empty.
 
 Additionally, two methods which give access:
 
@@ -29,8 +29,7 @@ a = NonEmptyArray.new()  # Ruby error - missing parameter
 
 ```ruby
 a = NonEmptyArray.new(100)
-a.count()         # => 1    All methods from [Enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html)
-
+a.count()         # => 1
 a.last()          # => 100
 a.all_but_last()  # => []   A normal array, which may indeed be empty.
 ```
