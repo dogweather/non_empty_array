@@ -1,15 +1,43 @@
-# typed: false
+# typed: ignore
 # frozen_string_literal: true
 
 require 'spec_helper'
 
 RSpec.describe NonEmptyArray do
-  it 'does something useful' do
-    expect(false).to eq(false)
+  let(:has_one) { NonEmptyArray.new('x') }
+  let(:has_three) { NonEmptyArray.new('x', %w[y z]) }
+
+  it 'handles length of 1' do
+    expect(has_one.count).to eq(1)
   end
 
-  it 'handles len of 1' do
-    has_one = NonEmptyArray.new('x')
-    expect(has_one.length).to eq(1)
+  it 'handles length of 3' do
+    expect(has_three.count).to eq(3)
+  end
+
+  it 'does last with length 1' do
+    expect(has_one.last).to eq('x')
+  end
+
+  it 'does last with length 3' do
+    expect(has_three.last).to eq('z')
+  end
+
+  it 'does all_but_last with length 1' do
+    expect(has_one.all_but_last).to eq([])
+  end
+
+  it 'does all_but_last with length 3' do
+    expect(has_three.all_but_last).to eq(%w[x y])
+  end
+
+  it 'properly pushes' do
+    has_one.push(99)
+    expect(has_one.count).to eq(2)
+
+    has_one.push('z')
+    expect(has_one.count).to eq(3)
+    expect(has_one.last).to eq('z')
+    expect(has_one.all_but_last).to eq(['x', 99])
   end
 end
