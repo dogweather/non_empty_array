@@ -37,7 +37,6 @@ a.max()           # => 300
 # Specific methods
 a.last()          # => 300
 a.all_but_last()  # => [100, 200]   A normal array, which may indeed be empty.
-
-a.push('1000')
-a.count()         # => 4
+a.push('400')
+a.all_but_last()  # => [100, 200, 300]
 ```
