@@ -33,8 +33,9 @@ a = NonEmptyArray.new(100, [200, 300])
 # Methods from Enumerable
 a.count()         # => 3
 a.max()           # => 300
+a.to_a()          # => [100, 200, 300]
 
-# Specific methods
+# Methods specific to NonEmptyArray
 a.last()          # => 300
 a.all_but_last()  # => [100, 200]   A normal array, which may indeed be empty.
 a.push('400')
