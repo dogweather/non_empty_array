@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'non_empty_array'
-  spec.version       = '1.1.0'
+  spec.version       = '1.1.1'
   spec.authors       = ['Robb Shecter']
   spec.email         = ['robb@public.law']
 
