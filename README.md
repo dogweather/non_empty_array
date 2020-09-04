@@ -2,8 +2,11 @@
 
 An enumerable which is guaranteed to not be empty.
 
-Additionally, three methods:
+Additionally, two methods which give access:
 
 * `last()`
 * `all_but_last()`
+
+And one method for mutating the list:
+
 * `push()`
