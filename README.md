@@ -2,15 +2,20 @@
 
 # NonEmptyArray
 
-An [enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html) which is guaranteed to not be empty. E.g., `#first`
+An [enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html) which is guaranteed to have at least one element. E.g., `#first`
 will never fail.
 
 These four methods give non-empty-aware access:
 
-* `#first` — Always succeeds
-* `#last`  — Always succeeds
-* `#tail`         — May be an empty Array
-* `#all_but_last` — May be an empty Array
+### Always succeed
+
+* `#first`
+* `#last`
+
+### May return an empty Array
+
+* `#tail`
+* `#all_but_last`
 
 And one method for mutating the list:
 
