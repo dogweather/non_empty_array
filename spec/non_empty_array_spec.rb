@@ -40,4 +40,12 @@ RSpec.describe NonEmptyArray do
     expect(has_one.last).to eq('z')
     expect(has_one.all_but_last).to eq(['x', 99])
   end
+
+  it 'does first with length 1' do
+    expect(has_one.first).to eq('x')
+  end
+
+  it 'does tail with length 1' do
+    expect(has_one.tail).to eq([])
+  end
 end

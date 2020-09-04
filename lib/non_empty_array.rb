@@ -18,7 +18,7 @@ class NonEmptyArray
 
   sig { override.params(block: T.untyped).void }
   def each(&block)
-    _all.each(&block)
+    all_elements.each(&block)
   end
 
   sig { returns(T.untyped) }
@@ -28,8 +28,11 @@ class NonEmptyArray
 
   sig { returns(T::Array[T.untyped]) }
   def all_but_last
-    T.must(_all.slice(0..-2))
+    T.must(all_elements.slice(0..-2))
   end
+
+  sig { returns(T::Array[T.untyped]) }
+  attr_reader :tail
 
   sig { params(element: T.untyped).returns(NonEmptyArray) }
   def push(element)
@@ -40,7 +43,7 @@ class NonEmptyArray
   private
 
   sig { returns(T::Array[T.untyped]) }
-  def _all
+  def all_elements
     [@head] + @tail
   end
 end
