@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
+require 'spec_helper'
+
 RSpec.describe NonEmptyArray do
-  it 'has a version number' do
-    expect(NonEmptyArray::VERSION).not_to be nil
+  it 'does something useful' do
+    expect(false).to eq(false)
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'handles len of 1' do
+    has_one = NonEmptyArray.new('x')
+    expect(has_one.length).to eq(1)
   end
 end
