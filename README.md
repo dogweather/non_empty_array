@@ -8,7 +8,7 @@ will never fail.
 Additionally, three methods which give access:
 
 * `#last` — Always succeeds
-* `#tail` — May be be an empty Array
+* `#tail` — May be an empty Array
 * `#all_but_last` — May be an empty Array
 
 And one method for mutating the list:
