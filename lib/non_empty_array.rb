@@ -31,6 +31,7 @@ class NonEmptyArray
     T.must(_all.slice(0..-2))
   end
 
+  sig { returns(T::Array[T.untyped])}
   attr_reader :tail
 
   sig { params(element: T.untyped).returns(NonEmptyArray) }
