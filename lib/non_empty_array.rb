@@ -1,4 +1,4 @@
-# typed: strict
+# typed: true
 # frozen_string_literal: true
 
 require 'sorbet-runtime'
@@ -29,6 +29,12 @@ class NonEmptyArray
   sig { returns(T::Array[T.untyped]) }
   def all_but_last
     T.must(_all.slice(0..-2))
+  end
+
+  sig { params(element: T.untyped).returns(NonEmptyArray) }
+  def push(element)
+    @tail.push(element)
+    self
   end
 
   private

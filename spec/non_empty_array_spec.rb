@@ -30,4 +30,14 @@ RSpec.describe NonEmptyArray do
   it 'does all_but_last with length 3' do
     expect(has_three.all_but_last).to eq(%w[x y])
   end
+
+  it 'properly pushes' do
+    has_one.push(99)
+    expect(has_one.count).to eq(2)
+
+    has_one.push('z')
+    expect(has_one.count).to eq(3)
+    expect(has_one.last).to eq('z')
+    expect(has_one.all_but_last).to eq(['x', 99])
+  end
 end
