@@ -31,6 +31,8 @@ class NonEmptyArray
     T.must(_all.slice(0..-2))
   end
 
+  attr_reader :tail
+
   sig { params(element: T.untyped).returns(NonEmptyArray) }
   def push(element)
     @tail.push(element)
