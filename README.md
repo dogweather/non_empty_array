@@ -2,16 +2,18 @@
 
 # NonEmptyArray
 
-An [enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html) which is guaranteed to not be empty.
+An [enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html) which is guaranteed to not be empty. E.g., `#first`
+will never fail.
 
-Additionally, two methods which give access:
+Additionally, three methods which give access:
 
-* `last()`
-* `all_but_last()`
+* `#tail`
+* `#last`
+* `#all_but_last`
 
 And one method for mutating the list:
 
-* `push()`
+* `#push`
 
 ## Why is this useful?
 
@@ -46,4 +48,7 @@ a.last()          # => 300          Always succeeds - never returns a "no elemen
 a.all_but_last()  # => [100, 200]   A normal array, which may indeed be empty.
 a.push('400')
 a.all_but_last()  # => [100, 200, 300]
+a.tail()          # => [200, 300, 400]
 ```
+
+Influenced by [Haskell's NonEmpty List](https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-List-NonEmpty.html).
