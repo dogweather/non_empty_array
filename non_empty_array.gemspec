@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'non_empty_array'
-  spec.version       = '1.0.0'
+  spec.version       = '1.1.0'
   spec.authors       = ['Robb Shecter']
   spec.email         = ['robb@public.law']
 
   spec.summary       = 'An ordered list guaranteed to have at least one element.'
-  spec.description   = "Inspired by Haskell's NonEmptyList"
+  spec.description   = "Inspired by Haskell's NonEmpty list"
   spec.homepage      = 'https://github.com/dogweather/non_empty_array'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
