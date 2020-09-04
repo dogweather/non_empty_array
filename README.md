@@ -7,9 +7,9 @@ will never fail.
 
 Additionally, three methods which give access:
 
-* `#tail`
-* `#last`
-* `#all_but_last`
+* `#last` — Always succeeds
+* `#tail` — May be be an empty Array
+* `#all_but_last` — May be an empty Array
 
 And one method for mutating the list:
 
@@ -44,7 +44,8 @@ a.max()           # => 300
 a.to_a()          # => [100, 200, 300]
 
 # Methods specific to NonEmptyArray
-a.last()          # => 300          Always succeeds - never returns a "no element" error.
+a.first()         # => 100          Always succeeds - never returns a "no element" error.
+a.last()          # => 300          Always succeeds
 a.all_but_last()  # => [100, 200]   A normal array, which may indeed be empty.
 a.push('400')
 a.all_but_last()  # => [100, 200, 300]
