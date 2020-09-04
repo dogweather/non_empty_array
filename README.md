@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/dogweather/non_empty_array.svg?branch=master)](https://travis-ci.com/dogweather/non_empty_array)
+[![Gem Version](https://badge.fury.io/rb/non_empty_array.svg)](https://badge.fury.io/rb/non_empty_array) [![Build Status](https://travis-ci.com/dogweather/non_empty_array.svg?branch=master)](https://travis-ci.com/dogweather/non_empty_array)
 
 # NonEmptyArray
 
