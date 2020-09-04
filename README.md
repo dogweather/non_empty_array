@@ -36,7 +36,7 @@ a.max()           # => 300
 a.to_a()          # => [100, 200, 300]
 
 # Methods specific to NonEmptyArray
-a.last()          # => 300
+a.last()          # => 300          Always succeeds - never returns a "no element" error.
 a.all_but_last()  # => [100, 200]   A normal array, which may indeed be empty.
 a.push('400')
 a.all_but_last()  # => [100, 200, 300]
