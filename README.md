@@ -5,10 +5,11 @@
 An [enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html) which is guaranteed to not be empty. E.g., `#first`
 will never fail.
 
-Additionally, three methods which give access:
+These four methods give non-empty-aware access:
 
-* `#last` — Always succeeds
-* `#tail` — May be an empty Array
+* `#first` — Always succeeds
+* `#last`  — Always succeeds
+* `#tail`         — May be an empty Array
 * `#all_but_last` — May be an empty Array
 
 And one method for mutating the list:
