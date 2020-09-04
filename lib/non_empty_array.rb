@@ -10,14 +10,14 @@ class NonEmptyArray
   include Enumerable
   extend T::Sig
 
-  sig { params(first_element: T.untyped).void }
-  def initialize(first_element)
+  sig { params(first_element: T.untyped, tail: T::Array[T.untyped]).void }
+  def initialize(first_element, tail = [])
     @head = first_element
-    @tail = T.let([], T::Array[T.untyped])
+    @tail = tail
   end
 
   sig { override.params(block: T.untyped).void }
   def each(&block)
-    [@head].each(&block)
+    ([@head] + @tail).each(&block)
   end
 end
