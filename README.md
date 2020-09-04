@@ -24,10 +24,14 @@ designed so that it's impossible for it to be empty. And it has accessors like `
 which always returns an element - it can never fail:
 
 ```ruby
+require 'non_empty_array'
+
 a = NonEmptyArray.new()  # => Ruby error - missing parameter
 ```
 
 ```ruby
+require 'non_empty_array'
+
 a = NonEmptyArray.new(100, [200, 300])
 
 # Methods from Enumerable
