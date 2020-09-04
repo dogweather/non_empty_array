@@ -10,6 +10,6 @@ RSpec.describe NonEmptyArray do
 
   it 'handles len of 1' do
     has_one = NonEmptyArray.new('x')
-    expect(has_one.length).to eq(1)
+    expect(has_one.count).to eq(1)
   end
 end
