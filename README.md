@@ -28,8 +28,12 @@ a = NonEmptyArray.new()  # Ruby error - missing parameter
 ```
 
 ```ruby
-a = NonEmptyArray.new(100)
-a.count()         # => 1
-a.last()          # => 100
-a.all_but_last()  # => []   A normal array, which may indeed be empty.
+a = NonEmptyArray.new(100, [200, 300])
+
+# Methods from Enumerable
+a.count()         # => 3
+
+# Specific methods
+a.last()          # => 300
+a.all_but_last()  # => [100, 200]   A normal array, which may indeed be empty.
 ```
