@@ -23,7 +23,7 @@ class NonEmptyArray
 
   sig { returns(T.untyped) }
   def last
-    _all[-1]
+    @tail[-1] || @head
   end
 
   sig { returns(T::Array[T.untyped]) }
