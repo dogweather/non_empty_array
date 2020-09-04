@@ -23,7 +23,9 @@ class NonEmptyArray
 
   sig { returns(T.untyped) }
   def last
-    @tail[-1] || @head
+    return @head if @tail.empty?
+
+    @tail[-1]
   end
 
   sig { returns(T::Array[T.untyped]) }

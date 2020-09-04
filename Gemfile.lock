@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    non_empty_array (1.1.0)
+    non_empty_array (1.1.1)
       sorbet-runtime (>= 0.5.5890)
 
 GEM

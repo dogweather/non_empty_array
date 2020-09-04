@@ -23,6 +23,20 @@ RSpec.describe NonEmptyArray do
     expect(has_three.last).to eq('z')
   end
 
+  it 'does last with false elements' do
+    one_false = NonEmptyArray.new(123, [false])
+
+    expect(one_false.to_a).to eq([123, false])
+    expect(one_false.last).to eq(false)
+  end
+
+  it 'does last with nil elements' do
+    one_nil = NonEmptyArray.new(123, [nil])
+
+    expect(one_nil.to_a).to eq([123, nil])
+    expect(one_nil.last).to eq(nil)
+  end
+
   it 'does all_but_last with length 1' do
     expect(has_one.all_but_last).to eq([])
   end
