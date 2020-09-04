@@ -42,6 +42,15 @@ a = NonEmptyArray.new()  # => Ruby error - missing parameter
 ```ruby
 require 'non_empty_array'
 
+a = NonEmptyArray.new('1000')  # Simplest way to create one
+a.count()       # => 1
+a.push('2000')
+a.count()       # => 2
+```
+
+```ruby
+require 'non_empty_array'
+
 a = NonEmptyArray.new(100, [200, 300])
 
 # Methods from Enumerable
