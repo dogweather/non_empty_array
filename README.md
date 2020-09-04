@@ -1,6 +1,6 @@
 # NonEmptyArray
 
-An [enumerable](All methods from [Enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html)) which is guaranteed to not be empty.
+An [enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html) which is guaranteed to not be empty.
 
 Additionally, two methods which give access:
 
