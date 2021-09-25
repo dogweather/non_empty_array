@@ -68,4 +68,4 @@ a.all_but_last()  # => [100, 200, 300]
 a.tail()          # => [200, 300, 400]
 ```
 
-Influenced by [Haskell's NonEmpty List](https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-List-NonEmpty.html).
+Inspired by [Haskell's NonEmpty List](https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-List-NonEmpty.html).
