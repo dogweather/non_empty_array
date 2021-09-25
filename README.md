@@ -32,7 +32,7 @@ This `NonEmptyArray` approach saves this unnecessary work by moving the non-empt
 into the type system, letting Ruby check and prevent misuse. I.e., this class is
 designed so that it's impossible for it to be empty. It has "made illegal states unrepresentable".
 
-And it has accessors like `#last` which always returns an element - it can never fail:
+And it has accessors like `#first` and `#last` which always returns an element - they can never fail:
 
 ```ruby
 require 'non_empty_array'
