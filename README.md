@@ -56,7 +56,7 @@ a.count()       # => 2
 ```ruby
 require 'non_empty_array'
 
-a = NonEmptyArray.new(100, [200, 300]).  # Can also create from both a head and tail
+a = NonEmptyArray.new(100, [200, 300]).  # Can also create from a head and tail
 
 # Methods from Enumerable
 a.count()         # => 3
