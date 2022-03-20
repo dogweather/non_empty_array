@@ -7,7 +7,7 @@ will never fail.
 
 These four methods give non-empty-aware access:
 
-### Always succeed
+### Always succeeds
 
 * `#first`
 * `#last`
@@ -26,13 +26,16 @@ And one method for mutating the list:
 Sometimes I know that an Array isn't empty. Or more accurately, it _shouldn't_ be empty, because
 otherwise, it means there's a bug somewhere. The usual way to handle this is
 to repeatedly check the array's length, or check for nil, and throw an exception if, for some
-reason, the Array _is_ empty.
+reason, the Array _is_ empty. We've all been there.
 
-This `NonEmptyArray` approach saves this unnecessary work by moving the non-emptyness
-into the type system, letting Ruby check and prevent misuse. I.e., this class is
+**The `NonEmptyArray` approach saves this work by moving the non-emptyness
+into the type system**, letting Ruby check and prevent misuse. I.e., this class is
 designed so that it's impossible for it to be empty. It has [made illegal states unrepresentable](https://oleb.net/blog/2018/03/making-illegal-states-unrepresentable/).
 
-And it has accessors like `#first` and `#last` which always returns an element - they can never fail:
+And it has accessors like `#first` and `#last` which always return an element - they can never fail.
+While Ruby isn't statically typed, the interpreter does check arity (the number of arguments provided).
+So we enlist the interpreter's help to ensure a `NonEmptyArray` is always created with at least one
+element:
 
 ```ruby
 require 'non_empty_array'
@@ -45,6 +48,7 @@ require 'non_empty_array'
 
 a = NonEmptyArray.new('1000')  # Simplest way to create one
 a.count()       # => 1
+a.first()       # => '1000'
 a.push('2000')
 a.count()       # => 2
 ```
@@ -52,7 +56,7 @@ a.count()       # => 2
 ```ruby
 require 'non_empty_array'
 
-a = NonEmptyArray.new(100, [200, 300]).  # Creating from both the head and tail
+a = NonEmptyArray.new(100, [200, 300]).  # Can also create from both a head and tail
 
 # Methods from Enumerable
 a.count()         # => 3
