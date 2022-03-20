@@ -24,7 +24,7 @@ And one method for mutating the list:
 ## Why is this useful?
 
 Sometimes I know that an Array isn't empty. Or more accurately, it _shouldn't_ be empty, because
-otherwise, it means there's a bug somewhere. The usual way to handle this is
+otherwise, it means there's a bug in my code. The usual way to handle this is
 to repeatedly check the array's length, or check for nil, and throw an exception if, for some
 reason, the Array _is_ empty. We've all been there.
 
